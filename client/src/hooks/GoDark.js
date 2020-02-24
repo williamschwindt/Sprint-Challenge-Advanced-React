@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export const GoDark = () => {
     const [isDark, setIsDark] = useState(false);
@@ -8,4 +8,5 @@ export const GoDark = () => {
     };
 
     return [isDark, setDark];
+
 }

@@ -2,10 +2,10 @@ import React from 'react';
 import { GoDark } from '../hooks/GoDark';
 
 export const PlayerCard = (props) => {
-    const [darkMode, setDarkMode] = GoDark();
+    const [darkMode, setDarkMode]  = GoDark();
     return (
-        <div className={`players ${darkMode ? 'dark' : ''}`}>
-            <button onClick={setDarkMode} >Switch Theme</button>
+        <div data-testid="players" className={`players ${darkMode ? 'dark' : ''}`}>
+            <button className={`${darkMode ? 'dark' : ''}`} data-testid="button" onClick={setDarkMode} >Switch Theme</button>
             {props.data.map(player => {
                 return (
                     <div className="player">
